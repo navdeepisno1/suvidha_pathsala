@@ -271,6 +271,12 @@
     </div>
 
     <script>
+        var x = document.getElementById("navbar").offsetHeight;
+        x += 24;
+        document.getElementById("about_us").style.paddingTop = x + "px";
+        document.getElementById("missions").style.paddingTop = x + "px";
+        document.getElementById("achievements").style.paddingTop = x + "px";
+        document.getElementById("contact_us").style.paddingTop = x + "px";
         window.onresize = function() {
             var x = document.getElementById("navbar").offsetHeight;
             x += 24;
