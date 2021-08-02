@@ -5,7 +5,7 @@
 
     </title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <style>
         * {
@@ -59,11 +59,7 @@
             text-align: center;
             padding-top: 112px;
             position: relative;
-            height: 60%;
-        }
-        
-        .container-contact-us {
-            padding-top: 112px;
+            height: 100%;
         }
         
         .container-contact-us .content-contact-us {
@@ -84,19 +80,19 @@
         }
         
         .padding-top {
-            padding-top: 150px;
+            padding-top: 0;
         }
         
         .container-about-us {
-            padding-left: 12vw;
-            padding-right: 12vw;
+            padding-left: 8vw;
+            padding-right: 8vw;
         }
         
         .content-contact-us {
             padding-top: 24px;
             padding-bottom: 24px;
-            padding-left: 12vw;
-            padding-right: 12vw;
+            padding-left: 8vw;
+            padding-right: 8vw;
         }
         
         .subject-chip {
@@ -119,7 +115,7 @@
 </head>
 
 <body>
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about_us">About Us</a></li>
@@ -128,27 +124,23 @@
             <li><a href="#contact_us">Contact Us</a></li>
         </ul>
     </div>
-    <div class="container-home padding-top" id="home">
+    <div class="container-home padding-top" id="home" style="background-color: black;">
         <div class="content-home" style="text-align: center;position: relative;width: 100%;height: 100%;">
-            <div style="text-align: center;">
-                <span style="text-align: center; font-size: 7vw;letter-spacing: 1.5vw;font-weight: 700;">
+
+            <img src="home_bg.svg" style="width: 60%;position: absolute;left: 50%; top: 53%; transform: translateX(-50%) translateY(-50%);">
+
+            <div style="text-align: center; position: absolute;left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%);">
+                <span style="text-align: center; font-size: 4.8vw;letter-spacing: 0.8vw;font-weight: 700;">
                     PAATHSAALA
                 </span>
-            </div>
-            <div style="text-align: center;">
+                <br>
                 <span style="text-align: center; font-size: 2.5vw;letter-spacing: 0.7vw;">
                     Only destination to your problems.
                 </span>
             </div>
-            <br>
-
-
-            <div style="text-align: center;background-image: url('home_bg.jpg');height: 300px;background-size: cover;background-repeat: no-repeat;background-position: center;">
-                <br><br><br><br><br><br><br>
-                <a href="#getstarted" style="text-decoration: none; color: white;font-weight: 700; font-size: 24px;background-color: black;padding: 12px 24px;border-radius: 100px;">
-                    Get Started&nbsp;&nbsp;&nbsp;<i class="bi bi-arrow-down-circle-fill"></i>
+            <a href="#about_us" style="text-decoration: none; color: black;font-weight: 700; font-size: 48px;background-color: white;padding: 3px 3px;border-radius: 100px;position: absolute;left: 50%; bottom: 24px;transform: translateX(-50%);">
+                <i class="bi bi-arrow-down-circle-fill"></i>
             </a>
-            </div>
         </div>
     </div>
 
@@ -193,7 +185,7 @@
     </div>
 
     <div class="padding-top" id="achievements">
-        <div style="padding-left: 12vw;padding-right: 12vw;">
+        <div style="padding-left: 8vw;padding-right: 8vw;">
             <div style="font-size: 48px; border-bottom: thick solid black;font-weight: 700;">What students think of us</div>
             <div style="padding-top: 24px;">
                 <marquee>
@@ -260,7 +252,7 @@
             </div>
         </div>
         <br><br>
-        <div style="text-align: center;">From the list of the above subject,if you need any help you can contact us on Whatsapp. <br>My Whatsapp number is:- <b>+91-8395930180</b>
+        <div style="text-align: center;padding-left: 8vw;padding-right: 8vw;">From the list of the above subject,if you need any help you can contact us on Whatsapp. <br>My Whatsapp number is:- <b>+91-8395930180</b>
         </div>
     </div>
 
@@ -276,6 +268,18 @@
             <br>
             <div style="text-align: center; font-weight: 700;">&copy; 2021 paathsaala </div>
         </div>
+    </div>
+
+    <script>
+        window.onresize = function() {
+            var x = document.getElementById("navbar").offsetHeight;
+            x += 24;
+            document.getElementById("about_us").style.paddingTop = x + "px";
+            document.getElementById("missions").style.paddingTop = x + "px";
+            document.getElementById("achievements").style.paddingTop = x + "px";
+            document.getElementById("contact_us").style.paddingTop = x + "px";
+        }
+    </script>
 
 </body>
 
